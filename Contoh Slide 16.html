@@ -1,0 +1,55 @@
+<HTML>
+<HEAD><TITLE >Contoh Operator Arithmetic</TITLE></HEAD> 1 
+<BODY>
+<FORM name="calculator" method="post" action=" operatorArithmatic.php">
+<table>
+    <tr>
+        <td colspan =::2">
+            <div align="center">Calculator Sederhana</div>
+        </td>
+    </tr>
+    <tr>
+        <td>c Operand Pertama</td> 
+        <td><1 input type="text" name="nilaipertama"></td>
+    </tr>
+    <tr>
+        <td>Operator x</td>
+        <td><select name="operator">
+            <option value="">Perkalian a</ option> <option value="/">Pembagian</option>
+            <option value="8">Modulus</option> <option value="+">Penjumlahan</ C*r_{3} >
+            <option value="-">Pengurangan</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Operand Kedua</td>
+        <td><1 input type="text" name="nilaikedua "></td>
+    </tr>
+    <tr>
+        <td><1 input type="submit" name="proses" value="Hitung"></td>
+        </tr>
+</table>
+</FORM> 
+<?PHP
+    $nilaipertama = $_POST['nilaipertama']; 
+    $operator = $_POST ['operator];
+    $nilaikedua = $_POST['nilai kedua']; 
+    if ($operator=='*') {
+        $hasil=$nilaipertama * $nilai kedua;
+        print("Hasil Perkalian = <b>$hasil</b>");
+    }elseif($operator=='/'){
+        $hasil=$nilaipertama / $nilai kedua;
+        print("Hasil Pembagian = <b>$hasil</b>");
+    }elseif($operator=='%'){
+        $hasil=$nilaipertama % $nilai kedua;
+        print("Hasil Modulus = <b>$hasil</b>");
+    }elseif($operator=='+'){
+        $hasil=$nilaipertama + $nilai kedua;
+        print("Hasil Penjumlahan = <b>$hasil</b>");
+    }elseif($operator=='-'){
+        $hasil=$nilaipertama - $nilai kedua;
+        print("Hasil Pengurangan = <b>$hasil</b>");
+    }
+?> 
+</BODY>
+</HTML>
